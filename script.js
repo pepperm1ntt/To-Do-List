@@ -1,6 +1,7 @@
 let items = ["hello world", "123"];
 
 const itemsDiv = document.getElementById("listWindow");
+const input = document.getElementById("taskInput");
 
 function loadItems() {
 
@@ -35,7 +36,16 @@ function saveItems() {
 }
 
 function addItem() {
+    const value = input.value;
 
+    if (!value) {
+        alert("You cannot add an empty item");
+        return;
+    }
+
+    items.push(value);
+    renderItems();
+    input.value = "";
 }
 
 function removeItem(idx) {
