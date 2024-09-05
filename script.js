@@ -28,6 +28,7 @@ function renderItems() {
         itemsDiv.appendChild(container);
     }
 }
+renderItems()
 
 function saveItems() {
 
@@ -38,5 +39,6 @@ function addItem() {
 }
 
 function removeItem(idx) {
-
+    items.splice(idx, 1);
+    renderItems();
 }
