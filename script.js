@@ -1,4 +1,4 @@
-let items = ["hello world", "123"];
+let items = [];
 
 const itemsDiv = document.getElementById("listWindow");
 const input = document.getElementById("taskInput");
