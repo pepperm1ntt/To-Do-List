@@ -16,4 +16,14 @@
     margin-bottom: 25px;
   }
 
+  h1 {
+    padding: 15px;
+  }
+
+  #taskInput {
+    margin-bottom: 15px;
+    width: 50%;
+  }
+
+  
 
