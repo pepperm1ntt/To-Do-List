@@ -2,9 +2,15 @@ let items = ["hello world", "123"];
 
 const itemsDiv = document.getElementById("listWindow");
 const input = document.getElementById("taskInput");
+const storageKey = "items";
 
 function loadItems() {
+    const oldItems = localStorage.getItem(storageKey);
+    if (oldItems) {
+        items = JSON.parse(oldItems);
+    }
 
+    renderItems();
 }
 
 function renderItems() {
@@ -29,10 +35,10 @@ function renderItems() {
         itemsDiv.appendChild(container);
     }
 }
-renderItems()
 
 function saveItems() {
-
+    const stringItems = JSON.stringify(items);
+    localStorage.setItem(storageKey, stringItems);
 }
 
 function addItem() {
@@ -46,9 +52,13 @@ function addItem() {
     items.push(value);
     renderItems();
     input.value = "";
+    saveItems();
 }
 
 function removeItem(idx) {
     items.splice(idx, 1);
     renderItems();
+    saveItems();
 }
+
+document.addEventListener("DOMContentLoaded", loadItems);
