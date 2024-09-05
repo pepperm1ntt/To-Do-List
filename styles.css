@@ -1,10 +1,17 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+html {
+    background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    height: 100%;
 }
 
 .center {
-    border: 2px solid;
     margin: auto;
     width: 50%;
     padding: 10px;
@@ -18,12 +25,32 @@
 
   h1 {
     padding: 15px;
+    font-family: "Playwrite CU", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+    font-size: 2.5em;
   }
 
   #taskInput {
     margin-bottom: 15px;
     width: 50%;
+    height: 25px;
+    background-color: white;
+    border-radius: 25px;;
+    padding-left: 10px;
+    border: 1px solid transparent;
   }
 
-  
+  #addBtn {
+    width: 60px;
+    height: 25px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    background-color: blue;;
+    margin-left: 5px;
+
+  }
+
 
