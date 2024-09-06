@@ -31,6 +31,7 @@ function renderItems() {
 
         const editButton = document.createElement("button");
         editButton.textContent = "Edit";
+        editButton.style.marginRight = "10px";
         editButton.onclick = () => editItem(idx);
 
         container.appendChild(editButton);
