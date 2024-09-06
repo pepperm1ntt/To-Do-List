@@ -7,19 +7,21 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+
     </head>
     <body>
-        <div id="addTaskWindow">
+        <div id="addTaskWindow" class="center">
             <h1>To Do List</h1>
             <input id="taskInput" type="text" placeholder="Add new Task">
-            <button>Add</button>
+            <button onclick="addItem()" id="addBtn">Add</button>
         </div>
-        <div id="listWindow">
-            <ul id="taskList">
-
-            </ul>
-        </div>
-        <script src=""></script>
+        <hr><hr>
+        <div id="listWindow" class="center"></div>
+        <script src="script.js"></script>
     </body>
 </html>
