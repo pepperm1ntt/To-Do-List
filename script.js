@@ -29,6 +29,11 @@ function renderItems() {
         button.textContent = "Delete";
         button.onclick = () => removeItem(idx);
 
+        const editButton = document.createElement("button");
+        editButton.textContent = "Edit";
+        editButton.onclick = () => editItem(idx);
+
+        container.appendChild(editButton);
         container.appendChild(text);
         container.appendChild(button);
 
@@ -59,6 +64,18 @@ function removeItem(idx) {
     items.splice(idx, 1);
     renderItems();
     saveItems();
+}
+
+function editItem(idx) {
+    const newValue = prompt("Edit your item: ", items[idx]);
+
+    if (newValue !== null && newValue !== "") {
+        items[idx] = newValue;
+        renderItems();
+        saveItems();
+    } else {
+        alert("Item cannot be empty");
+    }
 }
 
 document.addEventListener("DOMContentLoaded", loadItems);
